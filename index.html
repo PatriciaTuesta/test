@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B1221">
+  <meta name="description" content="Patricia Tuesta English Classes. Practica inglés desde Pre-A1 hasta C2 con preguntas, exámenes y explicaciones a tu ritmo.">
+  <title>Patricia Tuesta English Classes · Practica tu inglés</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script type="module" src="./assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <a class="brand" href="./" aria-label="Patricia Tuesta English Classes, inicio">
+        <span class="brand-name">Patricia Tuesta</span>
+        <span class="brand-second">English Classes</span>
+      </a>
+      <p class="sidebar-caption">TU ESPACIO DE APRENDIZAJE</p>
+      <nav class="main-nav">
+        <button class="nav-link is-active" data-action="home" aria-label="Mi ruta" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16m6-14v16"/></svg><span>Mi ruta</span></button>
+        <button class="nav-link" data-action="progress" aria-label="Mi progreso"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10m8 10V4m8 16v-7"/></svg><span>Mi progreso</span></button>
+        <button class="nav-link" data-action="guide" aria-label="Cómo funciona"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-4-4-9-3V3c5-1 9 3 9 3s4-4 9-3v15c-5-1-9 3-9 3zm0 0V6"/></svg><span>Cómo funciona</span></button>
+      </nav>
+      <div class="sidebar-note"><span class="tiny-label">PRACTICE WITH PURPOSE.</span><p>Abre nuevas puertas.<br>Empieza con tu inglés.</p><span class="note-star" aria-hidden="true">✧</span></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span> A tu ritmo, desde cualquier lugar.</div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span id="breadcrumb">APRENDE · PRACTICA · AVANZA</span><button class="help-button" data-action="guide" aria-label="Ayuda">?</button></header>
+      <div id="storage-notice" class="storage-notice" role="status" hidden></div>
+      <main id="main" tabindex="-1"><div class="loading-state" role="status"><span class="loader"></span><p>Preparando tu ruta de inglés…</p></div></main>
+      <footer class="site-footer"><span>Patricia Tuesta <span class="footer-course">English Classes</span></span><span>Tu aprendizaje. Tu ritmo. Tu próximo paso.</span></footer>
+    </div>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('main').innerHTML = '<section class="error-card"><h1>Tu ruta está lista para abrirse.</h1><p>Para probarla en tu PC, ejecuta <b>ABRIR_EN_WINDOWS.bat</b> o <code>node servidor.mjs</code> desde la carpeta del proyecto. Luego abre <b>http://localhost:8000</b>.</p><p>También puedes usar Live Server o publicar la carpeta en GitHub Pages. El servidor permite leer los siete archivos de nivel.</p></section>';
+    }
+  </script>
+  <noscript><div class="noscript">Activa JavaScript para elegir un nivel y comenzar la trivia.</div></noscript>
+</body>
+</html>

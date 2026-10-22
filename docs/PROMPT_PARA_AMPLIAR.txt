@@ -1,0 +1,39 @@
+QUIERO AMPLIAR UN SOLO BANCO JSON DE PATRICIA TUESTA ENGLISH CLASSES
+
+Te adjunto el JSON de un nivel y, si está disponible, el Plan Maestro de inglés. Trabaja únicamente en ese nivel. Devuélveme el JSON completo actualizado, sin texto alrededor ni cercas de Markdown, para reemplazar el archivo original.
+
+OBJETIVO
+Amplía las preguntas de los temas y subtemas ya definidos. Primero indica internamente qué subtemas vas a cubrir y asigna cantidades que puedas completar con calidad. Trabaja por lotes manejables si el archivo supera tu límite de salida; no cortes un JSON a la mitad ni prometas contenido que no entregues. En ese caso, acuerda antes un lote y devuelve un archivo válido que conserve lo existente.
+
+CONSERVA EL CONTRATO
+- Mantén schemaVersion: 1, bankId, level.id y los IDs existentes.
+- Mantén los campos superiores settings, sources, editorial, level y questions.
+- Conserva todas las preguntas, temas y subtemas ya incluidos. No los sustituyas por resúmenes.
+- Incrementa version del contenido, por ejemplo de 1.0.0 a 1.0.1.
+- No cambies assets, JavaScript, CSS ni HTML.
+- Actualiza las notas de editorial que describan el banco como una muestra de 24 preguntas, si dejan de ser ciertas.
+
+REGLAS DE PREGUNTAS
+- Cada pregunta tiene id único, levelId, topicId, subtopicId, type, prompt, options, answerId y explanation.
+- Usa type: "single-choice" para 2–6 opciones con IDs y textos distintos; recomienda 4 opciones para esta categoría. Hay exactamente una respuesta correcta.
+- Usa type: "true-false" para exactamente dos opciones: {"id":"true","text":"Verdadero"} y {"id":"false","text":"Falso"}. answerId es la cadena "true" o "false", nunca un booleano.
+- answerId debe coincidir con el ID de la opción correcta. La interfaz mezcla el orden visual de las opciones; no dependas de posiciones.
+- Usa únicamente topicId y subtopicId existentes en el nivel. Si necesitas ampliar la jerarquía, explica la propuesta antes de hacerlo.
+- Usa IDs con minúsculas, números y guiones. No repitas IDs ni preguntas con ligeras variaciones cosméticas.
+- Añade context como texto si hace falta un diálogo o párrafo para que la respuesta sea inequívoca.
+- Escribe enunciados e instrucciones claros, ejemplos en inglés y explicaciones útiles en español. En C1 y C2, usa complejidad y matices adecuados, no vocabulario elemental reetiquetado.
+- Evita ambigüedad entre variedades del inglés; indica variedad y contexto cuando afecten a la respuesta.
+- No copies ejercicios de Duolingo, Udemy u otras plataformas. Redacta preguntas originales a partir de los objetivos.
+- No inventes audio, imágenes, traducciones oficiales, certificados ni validación oral que la aplicación no tiene.
+- Una explicación debe justificar la respuesta y aclarar el error o matiz relevante; no se limite a repetir la opción correcta.
+
+CANTIDAD
+Objetivo sugerido para el lote elegido: al menos 24 preguntas por subtema cubierto. Eso permite un examen de 20 preguntas distintas con variación entre rondas. Si no puedes completar todos los subtemas, conserva su estructura y termina primero los que sí puedas cubrir. No repitas preguntas para llegar a una cifra.
+
+VERIFICA ANTES DE ENTREGAR
+1. JSON parseable en UTF-8, sin comentarios, sin comas finales y sin texto adicional.
+2. IDs de preguntas únicos; referencias válidas al nivel, tema y subtema.
+3. answerId presente en options y una única opción defendible como correcta.
+4. Explicaciones gramaticalmente correctas y dificultad apropiada.
+5. No se perdió ninguna pregunta o tema existente.
+6. Mantén cada nivel en su propio archivo; no generes un JSON combinado.
